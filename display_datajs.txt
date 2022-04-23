@@ -1,0 +1,21 @@
+$(document).ready(function () {
+    getData();
+  });
+  
+  function getData() {
+    let localStorageData = localStorage.getItem("student");
+    let studentObj = JSON.parse(localStorageData);
+    console.log(studentObj);
+    $("#name").text(studentObj.name);
+    $("#email").text(studentObj.email);
+    $("#password").text(studentObj.password);
+    $("#confirmpass").text(studentObj.confirmpass);
+    // $("#gender").text(studentObj.gender);
+    // $("#email").text(studentObj.email);
+    // $("#contactNo").text(studentObj.contactNo);
+    // $("#branch").text(studentObj.branch);
+    // $("#registrationDate").text(studentObj.registrationDate);
+    // $("#parentName").text(studentObj.parentName);
+    // $("#parentContactNo").text(studentObj.parentMobileNo);
+  }
+  
